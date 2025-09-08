@@ -2,7 +2,7 @@
 Honors Java/Data Structures Digital Portfolio - 2025-2026
 This repository hosts my Honors Engineering/Computer Science portfolio for
 2025-2026 at Charlotte Latin School.
-- **Live site (GitHub Pages):** &lt;(https://github.com/Origamibuilder/Ashri-Nishant-Portfolio)&gt;
+- **Live site (GitHub Pages):** &lt;([https://github.com/Origamibuilder/Ashri-Nishant-Portfolio](https://origamibuilder.github.io/Ashri-Nishant-Portfolio/))&gt;
 - **Instructor access:** Mrs. Morrow added as collaborator.
 ## About Me
 I am Nishant Ashri, a Junior student focusing on pursuing the effects of AI on biology with data scanning and machine learning.
