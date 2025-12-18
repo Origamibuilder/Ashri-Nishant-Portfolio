@@ -1,0 +1,105 @@
+import java.io.*;
+import java.nio.file.*;
+import java.time.*;
+import java.util.*;
+import java.util.stream.*;
+
+public class SwimTimePredictor {
+
+    static class Swimmer {
+        String id, name, sex;
+        int birthYear;
+
+        Swimmer(String id, String name, int birthYear, String sex) {
+            this.id = id;
+            this.name = name;
+            this.birthYear = birthYear;
+            this.sex = sex;
+        }
+    }
+
+    static class Event {
+        String stroke, course;
+        int distance;
+
+        Event(String stroke, int distance, String course) {
+            this.stroke = stroke;
+            this.distance = distance;
+            this.course = course;
+        }
+    }
+
+    static class Result {
+        Swimmer swimmer;
+        Event event;
+        LocalDate date;
+        double timeSec;
+
+        Result(Swimmer s, Event e, LocalDate d, double t) {
+            swimmer = s;
+            event = e;
+            date = d;
+            timeSec = t;
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        List<Result> results = loadCSV("swimdata.csv");
+        Map<String, List<Result>> history = groupBySwimmer(results);
+
+        for (String id : history.keySet()) {
+            List<Result> swims = history.get(id);
+            if (swims.size() < 2) continue;
+            double slope = simpleLinearRegression(swims);
+            double nextPred = swims.get(swims.size() - 1).timeSec + slope;
+            System.out.printf("%s predicted next time: %.2f sec%n", swims.get(0).swimmer.name, nextPred);
+        }
+    }
+
+    static List<Result> loadCSV(String path) throws IOException {
+        List<String> lines = Files.readAllLines(Paths.get(path));
+        List<Result> results = new ArrayList<>();
+        for (int i = 1; i < lines.size(); i++) {
+            String[] t = lines.get(i).split(",");
+            Swimmer s = new Swimmer(t[0], t[1], Integer.parseInt(t[2]), t[3]);
+            Event e = new Event(t[4], Integer.parseInt(t[5]), t[6]);
+            LocalDate date = LocalDate.parse(t[7]);
+            double time = Double.parseDouble(t[8]);
+            results.add(new Result(s, e, date, time));
+        }
+        results.sort(Comparator.comparing(r -> r.date));
+        return results;
+    }
+
+    static Map<String, List<Result>> groupBySwimmer(List<Result> data) {
+        Map<String, List<Result>> map = new HashMap<>();
+        for (Result r : data)
+            map.computeIfAbsent(r.swimmer.id, k -> new ArrayList<>()).add(r);
+        return map;
+    }
+
+    // basic regression: predict improvement trend over time
+    static double simpleLinearRegression(List<Result> swims) {
+        int n = swims.size();
+        double[] x = new double[n];
+        double[] y = new double[n];
+        LocalDate base = swims.get(0).date;
+
+        for (int i = 0; i < n; i++) {
+            x[i] = (double) (swims.get(i).date.toEpochDay() - base.toEpochDay());
+            y[i] = swims.get(i).timeSec;
+        }
+
+        double xMean = Arrays.stream(x).average().orElse(0);
+        double yMean = Arrays.stream(y).average().orElse(0);
+
+        double num = 0, den = 0;
+        for (int i = 0; i < n; i++) {
+            num += (x[i] - xMean) * (y[i] - yMean);
+            den += (x[i] - xMean) * (x[i] - xMean);
+        }
+        double slope = num / den;
+        return slope; // positive = getting slower, negative = improving
+    }
+}
+
