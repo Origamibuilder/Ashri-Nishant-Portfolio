@@ -176,4 +176,4 @@ Nishant Ashri
 Junior, Charlotte Latin School
 Interests include computer science, engineering, artificial intelligence, competitive swimming, speech & debate, and music (clarinet).
 
-```text
+
