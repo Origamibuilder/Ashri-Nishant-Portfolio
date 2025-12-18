@@ -84,8 +84,39 @@ performance psychology** into a practical and interactive tool.
 
 ## 🗂️ File Structure
 
-```text
+
 DataSplash.java        → Main Java application
 swimdb/
  └── fakeData.csv      → Example dataset for testing
 README.md              → Project documentation
+
+📚 Academic Integrity & AI Disclosure
+
+This project is my original work unless otherwise noted. Any code explicitly marked with:
+
+java
+// (AI-ADDED)
+was created or refined with assistance from an AI tool. All architectural decisions, logic integration, testing, and final implementation reflect my own understanding and work. External resources are cited below.
+
+---
+
+🔗 References (MLA)
+
+"Staying in Good Nervous before Your Races." USA Swimming, 2018.
+https://www.usaswimming.org/news/2018/12/11/staying-in-good-nervous-before-your-races.
+
+Narducci, Dusty M., et al. "Correlation of Pre-Race Anxiety Using the Generalized Anxiety Disorder 2-Item Scale." Psychiatric Quarterly, 2021.
+https://doi.org/10.1007/s11126-021-09964-1.
+
+"How to Mentally Prepare for Your Next Big Swim Meet." Elsmore Swim Shop, 2025.
+https://elsmoreswim.com/pages/how-to-mentally-prepare-for-your-next-big-swim-meet.
+
+---
+
+👤 Author
+
+Nishant Ashri
+Junior, Charlotte Latin School
+Interests include computer science, engineering, artificial intelligence, competitive swimming, speech & debate, and music (clarinet).
+
+```text
