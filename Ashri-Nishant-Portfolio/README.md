@@ -14,7 +14,7 @@ DataSplash provides a realistic, data-driven performance estimate.
 
 ---
 
-## 📌 Quick Project Summary (Submission Version)
+## 📌 Quick Project Summary 
 
 **DataSplash** analyzes historical swim meet data using Java data structures
 and linear regression to predict future race performance. Swimmers select a
@@ -66,6 +66,71 @@ performance psychology** into a practical and interactive tool.
 
 ---
 
+### ▶️ Usage Instructions
+
+### 1. Launch the Application
+Compile and run DataSplash.java.
+The main window will open with the swimmer list on the left and prediction tools on the right.
+
+### 2. Load Swim Data
+You can load data in two ways:
+Option A: Load a Single CSV File
+Click “Load Single CSV”.
+Select a CSV file containing swim race data.
+The program will automatically parse and organize the results.
+Option B: Load a Database Folder
+Enter a team name, gender, and year (optional).
+Click “Load Swim Database” and select a folder containing CSV files.
+DataSplash will load the matching file or all CSV files in the folder.
+Required CSV Format:
+swimmerId,name,birthYear,sex,distance,stroke,course,date,timeSeconds
+Example:
+12345,Jane Doe,2007,F,100,Free,SCY,2024-02-10,56.23
+   
+### 3. Select a Swimmer
+Choose a swimmer from the list on the left.
+Use the search bar to filter swimmers by name.
+Once selected, available events for that swimmer will appear automatically.
+
+### 4. Choose Events
+Select an Anchor Event (a known performance).
+Select a Target Event (the event you want to predict).
+Both events must be selected to run a prediction.
+
+### 5. Adjust Training Factors
+Use the Effort slider to represent training intensity.
+Use the Consistency slider to represent training regularity.
+Values range from 1 (low) to 5 (high).
+
+### 6. Run a Prediction
+Click “Predict Time”.
+DataSplash will:
+Analyze historical race trends
+Apply statistical regression
+Adjust the prediction based on training factors
+Results appear as:
+A text-based report
+A visual performance chart
+
+### 7. View Statistics and Visualizations
+Use the Statistics tab to see dataset summaries.
+View the Performance Chart to visualize trends and predicted results.
+Access additional tools such as swimmer comparison from the Tools menu.
+
+### 8. Add Results Manually (Optional)
+Enter swimmer and race details in the Manual Entry panel.
+Click “Add Result” to immediately include the data.
+The swimmer list and predictions update automatically.
+
+### 10. Export Results
+Use File → Export Prediction Report to save results as a text file.
+
+### 11. Theme & Accessibility
+Click “Switch Theme” in the bottom bar to toggle between dark and light modes.
+Progress indicators and status messages guide users during long operations.
+
+___
+
 ## ✨ Key Features
 
 - Java Swing GUI with event-driven programming
@@ -100,7 +165,7 @@ was created or refined with assistance from an AI tool. All architectural decisi
 
 ---
 
-🔗 References (MLA)
+# 🔗 References (MLA)
 
 "Staying in Good Nervous before Your Races." USA Swimming, 2018.
 https://www.usaswimming.org/news/2018/12/11/staying-in-good-nervous-before-your-races.
@@ -113,7 +178,7 @@ https://elsmoreswim.com/pages/how-to-mentally-prepare-for-your-next-big-swim-mee
 
 ---
 
-👤 Author
+# 👤 Author
 
 Nishant Ashri
 Junior, Charlotte Latin School
