@@ -1,4 +1,4 @@
-# 🌊 DataSplash  
+#  DataSplash  
 ### Swim Time Prediction Tool
 
 **Honors Java / Data Structures Digital Portfolio (2025–2026)**  
@@ -9,12 +9,11 @@ predict future race times when they are unsure what goal time to aim for.
 By analyzing historical swim meet data and applying statistical trends,
 DataSplash provides a realistic, data-driven performance estimate.
 
-🔗 **Repository:** https://github.com/Origamibuilder/Ashri-Nishant-Portfolio  
-👩‍🏫 **Instructor Access:** Mrs. Morrow (collaborator)
+**Repository:** https://github.com/Origamibuilder/Ashri-Nishant-Portfolio  
+**Instructor Access:** Mrs. Morrow (collaborator)
 
----
 
-## 📌 Quick Project Summary 
+## Quick Project Summary 
 
 **DataSplash** analyzes historical swim meet data using Java data structures
 and linear regression to predict future race performance. Swimmers select a
@@ -24,9 +23,7 @@ both a written prediction and a visual performance chart.
 This project demonstrates file I/O, data structures, GUI programming, and
 statistical reasoning in a real-world athletic context.
 
----
-
-## 🧠 Project Motivation
+## Project Motivation
 
 Many swimmers experience pre-race anxiety when they do not have a clear goal
 time for an event. DataSplash addresses this problem by turning past meet data
@@ -36,28 +33,26 @@ and reducing uncertainty before competition.
 This project blends **computer science**, **data analysis**, and **sports
 performance psychology** into a practical and interactive tool.
 
----
+## How It Works
 
-## ⚙️ How It Works
-
-### 1️⃣ Data Input
+### Data Input
 - Load a **single CSV file** or an entire **folder of CSV files**
 - Files act as a swim database (similar in structure to SwimCloud data)
 
-### 2️⃣ Swimmer & Event Selection
+### Swimmer & Event Selection
 - Search and select a swimmer
 - Choose:
   - **Anchor Event** – an event with known past performance
   - **Target Event** – the event to predict
 
-### 3️⃣ Prediction Engine
+### Prediction Engine
 - Applies **linear regression** to historical race data
 - Compares swimmer performance to others of similar caliber
 - Adjusts predictions using:
   - Training effort
   - Training consistency
 
-### 4️⃣ Output & Visualization
+### Output & Visualization
 - Generates a detailed text-based prediction report
 - Displays an interactive chart showing:
   - Historical race results
@@ -66,7 +61,7 @@ performance psychology** into a practical and interactive tool.
 
 ---
 
-### ▶️ Usage Instructions
+### Usage Instructions
 
 ### 1. Launch the Application
 Compile and run DataSplash.java.
@@ -129,9 +124,9 @@ Use File → Export Prediction Report to save results as a text file.
 Click “Switch Theme” in the bottom bar to toggle between dark and light modes.
 Progress indicators and status messages guide users during long operations.
 
-___
 
-## ✨ Key Features
+
+## Key Features
 
 - Java Swing GUI with event-driven programming
 - CSV file parsing and validation
@@ -145,17 +140,16 @@ ___
 - Dark / light theme toggle
 - Robust error handling and user feedback
 
----
 
-## 🗂️ File Structure
 
+## File Structure
 
 DataSplash.java        → Main Java application
 swimdb/
  └── fakeData.csv      → Example dataset for testing
 README.md              → Project documentation
 
-📚 Academic Integrity & AI Disclosure
+# Academic Integrity & AI Disclosure
 
 This project is my original work unless otherwise noted. Any code explicitly marked with:
 
@@ -163,7 +157,6 @@ java
 // (AI-ADDED)
 was created or refined with assistance from an AI tool. All architectural decisions, logic integration, testing, and final implementation reflect my own understanding and work. External resources are cited below.
 
----
 
 # 🔗 References (MLA)
 
@@ -176,9 +169,8 @@ https://doi.org/10.1007/s11126-021-09964-1.
 "How to Mentally Prepare for Your Next Big Swim Meet." Elsmore Swim Shop, 2025.
 https://elsmoreswim.com/pages/how-to-mentally-prepare-for-your-next-big-swim-meet.
 
----
 
-# 👤 Author
+# Author
 
 Nishant Ashri
 Junior, Charlotte Latin School
